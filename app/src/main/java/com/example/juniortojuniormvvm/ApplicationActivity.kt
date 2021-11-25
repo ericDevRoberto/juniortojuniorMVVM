@@ -1,7 +1,7 @@
 package com.example.juniortojuniormvvm
 
 import android.app.Application
-import com.example.juniortojuniormvvm.di.viewModelModules
+import com.example.juniortojuniormvvm.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -12,7 +12,11 @@ class ApplicationActivity : Application(){
         startKoin {
             androidContext(this@ApplicationActivity)
             modules(
-                viewModelModules
+                listOf(
+                    viewModelModules,
+                    domainModules,
+                    apiModules,
+                )
             )
         }
     }

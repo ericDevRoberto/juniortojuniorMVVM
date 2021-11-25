@@ -33,7 +33,7 @@ class FirstFragment : Fragment() {
     private fun setObservers() {
         viewModel.action.observe(viewLifecycleOwner) { action ->
             when (action) {
-                is FirstAction.GetName -> goToNextPage(action.text)
+                is FirstAction.GetName -> putnameCep(action.text)
             }
         }
     }
@@ -45,6 +45,10 @@ class FirstFragment : Fragment() {
         binding.textviewFirst.addTextChangedListener {
             viewModel.getTextFromEditText(it.toString())
         }
+    }
+
+    private fun putnameCep(endereco: String){
+        binding.textviewFirst.setText(endereco)
     }
 
     private fun goToNextPage(text: String) {
