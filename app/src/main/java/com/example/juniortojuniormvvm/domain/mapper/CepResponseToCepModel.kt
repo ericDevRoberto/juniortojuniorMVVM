@@ -5,6 +5,7 @@ import com.example.juniortojuniormvvm.domain.models.CepModel
 
 fun CepResponse.mapper() : CepModel{
     return CepModel(
-        endereco = "$logradouro, $complemento, $bairro | $localidade - $uf"
+        address = "$logradouro, $complemento, $bairro | $localidade - $uf",
+        cep = cep
     )
 }

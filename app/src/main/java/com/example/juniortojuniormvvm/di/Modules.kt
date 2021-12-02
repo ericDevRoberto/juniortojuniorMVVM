@@ -5,8 +5,9 @@ import com.example.juniortojuniormvvm.data.dataSource.GetCepInformationDataSourc
 import com.example.juniortojuniormvvm.data.repository.GetCepInformationRepositoryImpl
 import com.example.juniortojuniormvvm.domain.repository.GetCepInformationRepository
 import com.example.juniortojuniormvvm.domain.userCases.GetCepInformationUserCase
-import com.example.juniortojuniormvvm.presenter.firstfragment.FirstViewModel
-import com.example.juniortojuniormvvm.presenter.secondfragment.SecondViewModel
+import com.example.juniortojuniormvvm.presenter.historicFragment.HistoricViewModel
+import com.example.juniortojuniormvvm.presenter.homeFragment.HomeViewModel
+import com.example.juniortojuniormvvm.presenter.showCepfragment.ShowCepViewModel
 import com.example.lolgg.core.apiServiceCore
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -25,6 +26,7 @@ val domainModules = module {
 }
 
 val viewModelModules = module {
-    viewModel { FirstViewModel(get()) }
-    viewModel { SecondViewModel() }
+    viewModel { HomeViewModel(get()) }
+    viewModel { ShowCepViewModel() }
+    viewModel {HistoricViewModel()}
 }

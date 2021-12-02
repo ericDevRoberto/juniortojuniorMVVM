@@ -1,25 +1,21 @@
-package com.example.juniortojuniormvvm.presenter.secondfragment
+package com.example.juniortojuniormvvm.presenter.showCepfragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavArgs
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.juniortojuniormvvm.R
 import com.example.juniortojuniormvvm.databinding.FragmentSecondBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
-class SecondFragment : Fragment() {
+class ShowCepFragment : Fragment() {
 
     private lateinit var binding: FragmentSecondBinding
-    private val viewModel: SecondViewModel by viewModel()
-    private val args: SecondFragmentArgs by navArgs()
+    private val viewModel: ShowCepViewModel by viewModel()
+    private val args: ShowCepFragmentArgs by navArgs()
 
 
     override fun onCreateView(
@@ -39,8 +35,8 @@ class SecondFragment : Fragment() {
     private fun setObservables() {
         viewModel.action.observe(viewLifecycleOwner){ action ->
             when(action){
-                SecondViewModel.SecondAction.GoBack -> goBack()
-                is SecondViewModel.SecondAction.PutTextOnView -> setTextOnView(action.text)
+                ShowCepViewModel.SecondAction.GoBack -> goBack()
+                is ShowCepViewModel.SecondAction.PutTextOnView -> setTextOnView(action.text)
             }
         }
     }
