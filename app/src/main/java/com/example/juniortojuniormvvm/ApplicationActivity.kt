@@ -16,6 +16,7 @@ class ApplicationActivity : Application(){
                     viewModelModules,
                     domainModules,
                     apiModules,
+                    dataBaseModules,
                 )
             )
         }

@@ -1,4 +1,4 @@
-package com.example.juniortojuniormvvm.domain.mapper
+package com.example.juniortojuniormvvm.data.mapper
 
 import com.example.juniortojuniormvvm.data.models.response.CepResponse
 import com.example.juniortojuniormvvm.domain.models.CepModel
